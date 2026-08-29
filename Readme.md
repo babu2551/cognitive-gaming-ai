@@ -205,7 +205,7 @@ The best-performing model can then be saved and integrated into the FastAPI back
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/cognitive-care-ai.git
+git clone https://github.com/babu2551/cognitive-gaming-ai.git
 cd cognitive-care-ai
 ```
 
