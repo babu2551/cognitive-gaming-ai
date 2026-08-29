@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cognitive assessment risk classification" />
+    <title>Clarity | Cognitive Risk Check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <div class="page-grid" aria-hidden="true"></div>
+    <main class="shell">
+        <header class="topbar">
+            <a class="brand" href="./index.html"><span class="brand-mark">C</span><span>Clarity</span></a>
+            <span class="service-status"><span class="status-dot"></span>Model ready</span>
+        </header>
+
+        <section class="intro">
+            <div class="intro-copy">
+                <p class="kicker">Cognitive assessment / 01</p>
+                <h1>A clearer view of cognitive wellbeing.</h1>
+                <p class="lede">Enter the assessment measures below for an AI-assisted risk classification. This tool is
+                    a screening aid, not a medical diagnosis.</p>
+            </div>
+            <div class="intro-aside"><span class="aside-number">07</span><span>measures<br />analyzed</span></div>
+        </section>
+
+        <section class="workspace">
+            <form id="assessment-form" class="assessment-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="kicker">Start here</p>
+                        <h2>Tell us about you</h2>
+                    </div>
+                    <span class="required-note">Step 01 / 02</span>
+                </div>
+                <div id="profile-step">
+                    <div class="field-grid profile-grid">
+                        <label><span>Age <small>years</small></span><input id="age" name="Age" type="number" min="0"
+                                max="120" placeholder="67" required /></label>
+                        <label><span>Education <small>years</small></span><input id="education" name="Education_Years"
+                                type="number" min="0" max="30" placeholder="14" required /></label>
+                    </div>
+                    <button id="begin-button" class="primary-button" type="button"><span>Begin cognitive
+                            games</span><span class="button-arrow">↗</span></button>
+                </div>
+
+                <div id="game-step" class="hidden">
+                    <div class="game-progress"><span id="game-counter">Game 1 of 3</span><span class="progress-track"><i
+                                id="progress-bar"></i></span></div>
+                    <section id="game-card" class="game-card"></section>
+                    <div class="game-actions"><button id="game-action" class="primary-button" type="button"><span>Start
+                                game</span><span class="button-arrow">↗</span></button><button id="reset-button"
+                            class="text-button" type="button">Restart</button></div>
+                </div>
+                <p class="form-footnote">Your game performance is converted into a screening score and sent to the local
+                    API.</p>
+            </form>
+
+            <aside id="result-panel" class="result-panel" aria-live="polite">
+                <div class="result-placeholder"><span class="placeholder-line"></span>
+                    <p>Awaiting assessment</p><span>Complete the form to see your classification.</span>
+                </div>
+            </aside>
+        </section>
+
+        <footer><span>CLARITY / COGNITIVE SCREENING</span><span>For informational use only</span></footer>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
